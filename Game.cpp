@@ -14,8 +14,7 @@ Game::Game(const Game &g)
 {}
 
 Game::~Game()
-{
-}
+{}
 
 Player &Game::curPlayer()
 {
@@ -88,6 +87,7 @@ void Game::playTurn()
     setCurPlayer(origPlayer);
     checkForWinners();
 }
+
 void Game::checkForWinners()
 {
     if (curPlayer().getDiscsInCaptivity() >= WINNING_MIN)
@@ -132,6 +132,7 @@ void Game::setCurPlayer(const char c)
 {
     whosTurn = c;
 }
+
 void Game::switchPlayer()
 {
     if (whosTurn == 'N')
@@ -157,6 +158,7 @@ char Game::gameWinner() const
 {
     return winner;
 }
+
 void Game::printStatus() const
 {
     cout << p1.getDiscsInCaptivity() << endl;

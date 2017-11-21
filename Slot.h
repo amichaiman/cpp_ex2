@@ -4,18 +4,18 @@
 class Slot
 {
 public:
-    Slot();
-    Slot(const Slot &s);
-    ~Slot();
+    Slot();                 //c'tor
+    Slot(const Slot &s);    //copy c'tor
+    ~Slot();                //d'tor
     int getNumOfDiscs() const;
     void setNumOfDiscs(const int n);
-    void operator++(int);
-    void operator++();
-    void operator--(int);
-    void operator--();
+    void operator++(int);   //inc number of discs
+    void operator++();      //inc number of discs
+    void operator--(int);   //dec number of discs
+    void operator--();      //dec number of discs
 private:
     const int DISC_NUM_AT_START = 4;
-    int discs;
+    int discs;  //number of discs in slot
 };
 
 

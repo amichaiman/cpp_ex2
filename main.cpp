@@ -6,8 +6,8 @@ int main()
 {
     Game wari;
     
-    wari.setCurPlayer('N');
-    while(wari.gameWinner() == ' ')
+    wari.setCurPlayer('N'); //'N' gets first move
+    while(wari.gameWinner() == ' ') //as long as no winner was declared
     {
         wari.playTurn();
         wari.switchPlayer();
