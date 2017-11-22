@@ -29,7 +29,7 @@ private:
     Player p2;  //player 'S'
     char winner;        //gets values: ' ' - for no winner. 'N'/'S' for winning player. 'T' for tie
     char whosTurn;     
-    const int WINNING_MIN = 24; //minimum number of discs to declare winner
+    static const int WINNING_MIN = 24; //minimum number of discs to declare winner
 };
 
 #endif

@@ -62,19 +62,20 @@ void Game::playTurn()
         return;
     
     string action;
-    cout << curPlayer().getName() << ":\t";
+    cout << curPlayer().getName() << ":" << endl;
     cin >> action;
     
     while (!isValidInput(action))
     {
         cout << "Invalid move; the game awaits a valid move.\n";
-        cout << curPlayer().getName() << ":\t";
+        cout << curPlayer().getName() << ":";
         cin >> action;
     }
     
     
     if (action == "QUIT")
     {
+        cout << whosTurn << ": QUIT" << endl;
         switchPlayer();
         winner = whosTurn;
         switchPlayer();
@@ -169,7 +170,7 @@ void Game::printStatus() const
 void Game::printWinner() const
 {
     if (winner == 'T')
-        cout << "The game ends in a tie." << endl;
+        cout << "The game ends in a tie.";
     else
-        cout << winner << " wins the game." << endl;
+        cout << winner << " wins the game.";
 }

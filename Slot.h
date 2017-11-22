@@ -14,7 +14,7 @@ public:
     void operator--(int);   //dec number of discs
     void operator--();      //dec number of discs
 private:
-    const int DISC_NUM_AT_START = 4;
+    static const int DISC_NUM_AT_START = 4;
     int discs;  //number of discs in slot
 };
 
